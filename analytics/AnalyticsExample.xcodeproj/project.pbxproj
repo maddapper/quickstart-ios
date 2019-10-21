@@ -35,6 +35,7 @@
 		EFB6C1BA1C656D38007CCA78 /* FoodPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6C1B91C656D38007CCA78 /* FoodPickerViewController.swift */; };
 		FD9DB70D235E3C8700A26115 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD9DB70C235E3C8700A26115 /* GoogleService-Info.plist */; };
 		FD9DB70E235E3C8A00A26115 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD9DB70C235E3C8700A26115 /* GoogleService-Info.plist */; };
+		FD9DB711235E473A00A26115 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9DB710235E473A00A26115 /* AdSupport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		EFB6C1B91C656D38007CCA78 /* FoodPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodPickerViewController.swift; sourceTree = "<group>"; };
 		FD9DB70C235E3C8700A26115 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FD9DB70F235E420200A26115 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FD9DB710235E473A00A26115 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCAB9F31D2D0D733ECF9617A /* Pods_AnalyticsExampleSwift.framework in Frameworks */,
+				FD9DB711235E473A00A26115 /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +173,7 @@
 		303CDF95B9F99D343D261384 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD9DB710235E473A00A26115 /* AdSupport.framework */,
 				EB764F00F281DDE88AB3ED42 /* Pods_AnalyticsExample.framework */,
 				DE640A1A9156AA5B0CFD21B3 /* Pods_AnalyticsExampleSwift.framework */,
 				905F959E40BA7CD7A443D151 /* Pods_AnalyticsExampleTests.framework */,
