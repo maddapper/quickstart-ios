@@ -1,11 +1,17 @@
 # AnalyticsExample
 
 use_frameworks!
-platform :ios, '8.0'
+platform :ios, '9.0'
 
 target 'AnalyticsExample' do
-  pod 'Firebase/Analytics'
-
+  pod 'FBAudienceNetwork', '~> 5.5'
+  pod 'Firebase/Analytics', '~> 6.0'
+  pod 'FSAdSDK/Banner', '~> 0.5'
+  pod 'google-cast-sdk', '~> 4.0'
+  pod 'Google-Mobile-Ads-SDK', :git => 'https://github.com/freestarcapital/GMA-iOS-SDK.git', :tag => '7.50.0'
+  pod 'GoogleAds-IMA-iOS-SDK', '~> 3.9'
+  pod 'GoogleMobileAdsMediationFacebook', '~> 5.5'
+  
   target 'AnalyticsExampleTests' do
     inherit! :search_paths
   end
