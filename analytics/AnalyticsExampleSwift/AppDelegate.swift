@@ -16,6 +16,9 @@
 
 import UIKit
 import Firebase
+import GoogleMobileAds
+import FSAdSDK
+import PrebidMobileFS
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,10 +30,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // [START tracker_swift]
     FirebaseApp.configure()
     // [END tracker_swift]
-
-    // Set a white background so that patterns are showcased.
-    window?.backgroundColor = .white
-
+            
+    PBLogManager.setPBLogLevel(PBLogLevel.debug)
+    FSRegistration.register { (status, adUnits) in
+      // optional for first ad load
+      if (status == .success) {
+        // status or informational
+        for adUnit in adUnits! {
+          print("\(adUnit.identifier!) | \(adUnit.adSizes!)")
+        }
+      }
+    }
+    
     return true
   }
 

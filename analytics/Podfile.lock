@@ -1,14 +1,11 @@
 PODS:
-  - FBAudienceNetwork (5.5.1):
-    - FBSDKCoreKit/Basics (>= 5.2.1)
-  - FBSDKCoreKit/Basics (5.8.0)
-  - Firebase/Analytics (6.10.0):
+  - Firebase/Analytics (6.11.0):
     - Firebase/Core
-  - Firebase/Core (6.10.0):
+  - Firebase/Core (6.11.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 6.1.3)
-  - Firebase/CoreOnly (6.10.0):
-    - FirebaseCore (= 6.3.1)
+  - Firebase/CoreOnly (6.11.0):
+    - FirebaseCore (= 6.3.2)
   - FirebaseAnalytics (6.1.3):
     - FirebaseCore (~> 6.3)
     - FirebaseInstanceID (~> 4.2)
@@ -18,7 +15,7 @@ PODS:
     - GoogleUtilities/Network (~> 6.0)
     - "GoogleUtilities/NSData+zlib (~> 6.0)"
     - nanopb (~> 0.3.901)
-  - FirebaseCore (6.3.1):
+  - FirebaseCore (6.3.2):
     - FirebaseCoreDiagnostics (~> 1.0)
     - FirebaseCoreDiagnosticsInterop (~> 1.0)
     - GoogleUtilities/Environment (~> 6.2)
@@ -30,43 +27,29 @@ PODS:
     - GoogleUtilities/Logger (~> 6.2)
     - nanopb (~> 0.3.901)
   - FirebaseCoreDiagnosticsInterop (1.0.0)
-  - FirebaseInstanceID (4.2.5):
+  - FirebaseInstanceID (4.2.6):
     - FirebaseCore (~> 6.0)
     - GoogleUtilities/Environment (~> 6.0)
     - GoogleUtilities/UserDefaults (~> 6.0)
-  - FSAdSDK/Banner (0.5.4):
+  - FSAdSDK/Banner (0.6.0):
     - FSAdSDK/Core
-    - FSAdSDK/DFP
-    - FSCache
-    - PrebidMobileFS (~> 0.6.1)
-    - Protobuf (~> 3.10.0)
-  - FSAdSDK/Common (0.5.4):
-    - FSCache
-    - PrebidMobileFS (~> 0.6.1)
-    - Protobuf (~> 3.10.0)
-  - FSAdSDK/Core (0.5.4):
-    - FSAdSDK/Common
+  - FSAdSDK/Core (0.6.0):
     - FSAdSDK/Registration
     - FSCache
+    - FSCommon
+    - FSDFP
     - PrebidMobileFS (~> 0.6.1)
     - Protobuf (~> 3.10.0)
-  - FSAdSDK/DFP (0.5.4):
-    - FSCache
-    - PrebidMobileFS (~> 0.6.1)
-    - Protobuf (~> 3.10.0)
-  - FSAdSDK/Registration (0.5.4):
-    - FSCache
-    - PrebidMobileFS (~> 0.6.1)
-    - Protobuf (~> 3.10.0)
+  - FSAdSDK/Registration (0.6.0)
   - FSCache (0.0.1)
-  - google-cast-sdk (4.4.5):
-    - google-cast-sdk/Core (= 4.4.5)
-    - Protobuf (~> 3.0)
-  - google-cast-sdk/Core (4.4.5):
-    - Protobuf (~> 3.0)
+  - FSCommon (1.1.0)
+  - FSDFP (7.50.0):
+    - FSCache
+    - FSCommon
+    - Google-Mobile-Ads-SDK (= 7.50.0)
+    - PrebidMobileFS (~> 0.6.1)
   - Google-Mobile-Ads-SDK (7.50.0):
     - GoogleAppMeasurement (~> 6.0)
-  - GoogleAds-IMA-iOS-SDK (3.10.1)
   - GoogleAppMeasurement (6.1.3):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
     - GoogleUtilities/MethodSwizzler (~> 6.0)
@@ -77,9 +60,6 @@ PODS:
   - GoogleDataTransportCCTSupport (1.2.1):
     - GoogleDataTransport (~> 3.0)
     - nanopb (~> 0.3.901)
-  - GoogleMobileAdsMediationFacebook (5.5.1.1):
-    - FBAudienceNetwork (= 5.5.1)
-    - Google-Mobile-Ads-SDK (>= 7.50.0)
   - GoogleUtilities/AppDelegateSwizzler (6.3.1):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -103,76 +83,65 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
-  - PrebidMobileFS (0.6.2):
+  - PrebidMobileFS (0.6.3):
     - FSCache
   - Protobuf (3.10.0)
 
 DEPENDENCIES:
-  - FBAudienceNetwork (~> 5.5)
-  - Firebase/Analytics
   - Firebase/Analytics (~> 6.0)
-  - FSAdSDK/Banner (~> 0.5)
-  - google-cast-sdk (~> 4.0)
-  - Google-Mobile-Ads-SDK (from `https://github.com/freestarcapital/GMA-iOS-SDK.git`, tag `7.50.0`)
-  - GoogleAds-IMA-iOS-SDK (~> 3.9)
-  - GoogleMobileAdsMediationFacebook (~> 5.5)
+  - FSAdSDK/Banner (from `https://github.com/freestarcapital/Freestar-Mobile-iOS-SDK.git`, branch `analytics`)
+  - Google-Mobile-Ads-SDK (~> 7.50.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - FBAudienceNetwork
-    - FBSDKCoreKit
+  trunk:
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
     - FirebaseCoreDiagnostics
     - FirebaseCoreDiagnosticsInterop
     - FirebaseInstanceID
-    - FSAdSDK
     - FSCache
-    - google-cast-sdk
-    - GoogleAds-IMA-iOS-SDK
+    - FSCommon
+    - FSDFP
+    - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
-    - GoogleMobileAdsMediationFacebook
     - GoogleUtilities
     - nanopb
     - PrebidMobileFS
     - Protobuf
 
 EXTERNAL SOURCES:
-  Google-Mobile-Ads-SDK:
-    :git: https://github.com/freestarcapital/GMA-iOS-SDK.git
-    :tag: 7.50.0
+  FSAdSDK:
+    :branch: analytics
+    :git: https://github.com/freestarcapital/Freestar-Mobile-iOS-SDK.git
 
 CHECKOUT OPTIONS:
-  Google-Mobile-Ads-SDK:
-    :git: https://github.com/freestarcapital/GMA-iOS-SDK.git
-    :tag: 7.50.0
+  FSAdSDK:
+    :commit: 59a5cf790957d733a653633a40967d3dc95eb4f7
+    :git: https://github.com/freestarcapital/Freestar-Mobile-iOS-SDK.git
 
 SPEC CHECKSUMS:
-  FBAudienceNetwork: 783ff4808b0b59d0eb294dd94eb251f46e0ce5c9
-  FBSDKCoreKit: e7dcac0aabcfb09d0166998edd95fe3b05a0ce5d
-  Firebase: 5e6b7b12bf9adb90986688edc06b156c37e109cd
+  Firebase: bc9cfc7a96c73268656d5aaab453ff1b4b530e0e
   FirebaseAnalytics: 0e3ecff2c5d86070f7d4325e21f1edabfbd558dc
-  FirebaseCore: 064c2dd92a8ca5974bbdcb080df9921e46bd34cd
+  FirebaseCore: beeff42c07c30ea94702471d99db2089b594fbbd
   FirebaseCoreDiagnostics: af29e43048607588c050889d19204f4d7b758c9f
   FirebaseCoreDiagnosticsInterop: 6829da2b8d1fc795ff1bd99df751d3788035d2cb
-  FirebaseInstanceID: 550df9be1f99f751d8fcde3ac342a1e21a0e6c42
-  FSAdSDK: 7be26fd151393100d60012151699f0f4a8457e10
+  FirebaseInstanceID: d0eafcd8bdbd3447cd694594734078c3e3e77d8b
+  FSAdSDK: 87babc9eeecbaa85e69cb437ee498b9eccf48b87
   FSCache: c6ea4c84d130a4125f95899b2ce2e0b685e44f92
-  google-cast-sdk: 26aba79950b712035efb6801dee2d7db2b7f58e5
-  Google-Mobile-Ads-SDK: 3b7e4f335d60236c8b390e7a660123e4e2d2de61
-  GoogleAds-IMA-iOS-SDK: 0e37ab83b22075ad631a70dcba9528cb246c92bf
+  FSCommon: 2685c7cb2e3af0fcd448da35acdbea3040dbdfec
+  FSDFP: dfea0683e8cc073c527316da1bfdf34885071b49
+  Google-Mobile-Ads-SDK: d48dbaf5bae1ab7a94a9786f493c26c454bc6f16
   GoogleAppMeasurement: 434cc7be25e71dc04b8d0e3079125127b330e84a
   GoogleDataTransport: 166f9b9f82cbf60a204e8fe2daa9db3e3ec1fb15
   GoogleDataTransportCCTSupport: f6ab1962e9dc05ab1fb938b795e5b310209edeec
-  GoogleMobileAdsMediationFacebook: ceceecd3bdefeaa0e050bd6101679a8d7425233b
   GoogleUtilities: f895fde57977df4e0233edda0dbeac490e3703b6
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
-  PrebidMobileFS: 9c3f393f65fc9042edb54f66deb80386ef1004c0
+  PrebidMobileFS: 31ba56ee60ff2f05486517ab5a11d44a5a1c0541
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
 
-PODFILE CHECKSUM: 905be82fb823b5890cc981b9bc7991f5d3f766ff
+PODFILE CHECKSUM: 923e06070d461efd62eb153aecaee4433670d570
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.4

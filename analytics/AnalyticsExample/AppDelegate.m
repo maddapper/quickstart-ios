@@ -22,10 +22,12 @@
 #import "AppDelegate.h"
 
 @import Firebase;
+@import GoogleMobileAds;
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  
   // [START configure]
   [FIRApp configure];
   // [END configure]
