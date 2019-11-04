@@ -17,29 +17,45 @@
 import UIKit
 import Firebase
 import GoogleMobileAds
-//import FSAdSDK
+import FSAdSDK
+import SnapKit
 
 @objc(ViewController)  // match the ObjC symbol name inside Storyboard
 class ViewController: UIViewController {
-//    var bannerView: (UIView & FSBanner)?
+    var bannerView: (UIView & FSBanner)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        bannerView = FSAdProvider.createBanner(withIdentifier: "Freestar_Test_320x50", size: kGADAdSizeBanner, adUnitId: "/15184186/Freestar_Test_320x50", registrationDelegate: nil, eventHandler: { [weak self]
-//            (methodName: String!, params: [ String : Any]) in
-//            print(methodName!)
-//            print(params)
-//            if let error = params["error"] {
-//                print(error)
-//            }
-//        })
-//        bannerView?.rootViewController = self
-//        bannerView?.load(DFPRequest())
-//        view.addSubview(bannerView!)
+        bannerView = FSAdProvider.createBanner(withIdentifier: "swingu_app_300x250_Mid", size: kGADAdSizeMediumRectangle, adUnitId: "/15184186/swingu_app_300x250_Mid", registrationDelegate: nil, eventHandler: {
+            (methodName: String!, params: [ String : Any]) in
+            print(methodName!)
+            print(params)
+            if let error = params["error"] {
+                print(error)
+            }
+        })
+        
+        bannerView?.rootViewController = self
+        bannerView?.load(DFPRequest())
+        view.addSubview(bannerView!)
+        bannerView?.snp.makeConstraints{make in
+            make.centerX.centerY.equalToSuperview()
+        }
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        view.bringSubviewToFront(bannerView!)
+        
+//        bannerView?.pauseRefresh()
+    }
+    
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
+        
+//    bannerView?.resumeRefresh()
 
     recordScreenView()
 
